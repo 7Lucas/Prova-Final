@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+import { status } from 'src/interfaceTarefas'
+import { TarefasService } from 'src/app/tarefas.service'
+
 @Component({
   selector: 'app-tarefas',
   templateUrl: './tarefas.component.html',
@@ -7,9 +10,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TarefasComponent implements OnInit {
 
-  constructor() { }
+  constructor(private getservice: TarefasService) { }
+
+  tf: status[]=[];
 
   ngOnInit(): void {
+    this.getservice.stTarefas().subscribe(tarefa => this.tf =tarefa)
   }
 
 }
