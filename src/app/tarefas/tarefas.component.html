@@ -1,16 +1,17 @@
 <h1>Lista de Tarefas</h1>
 
 <table>
-    <tr>
+    <tr class="topo">
         <td>UserID</td>
         <td>ID</td>
         <td>Title</td>
         <td>Completed</td>
     </tr>
-    <tr>
-        <td>teste</td>
-        <td>teste</td>
-        <td>teste</td>
-        <td>teste</td>
+
+    <tr *ngFor="let sTF of tf">
+        <td>{{sTF.userId}}</td>
+        <td>{{sTF.id}}</td>
+        <td>{{sTF.title}}</td>
+        <td>{{sTF.completed}}</td>
     </tr>
 </table>

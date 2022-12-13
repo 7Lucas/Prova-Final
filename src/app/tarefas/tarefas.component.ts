@@ -11,7 +11,7 @@ import { TarefasService } from 'src/app/tarefas.service'
 export class TarefasComponent implements OnInit {
 
   constructor(private getservice: TarefasService) { }
-
+  
   tf: status[]=[];
 
   ngOnInit(): void {
